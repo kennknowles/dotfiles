@@ -1,0 +1,14 @@
+[user]
+	name = Kenneth Knowles
+	email = kenn.knowles@gmail.com
+[alias]
+	co = checkout
+	st = status
+	supdate = submodule update --init --recursive
+  peebase = pull --rebase
+[push]
+	default = tracking
+[color]
+	ui = auto
+[merge]
+	log = true
