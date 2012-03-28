@@ -26,3 +26,16 @@
 ;;
 (require 'viper)
 (setq viper-expert-level 4)
+
+;;
+;; No asking about checking out files for SVN, Hg, and git.
+;;
+(defadvice 
+  viper-maybe-checkout 
+  (around viper-checkin-fix activate)
+  (let ((file (expand-file-name (buffer-file-name buf))))
+    (when (and (featurep 'vc-hooks)
+	       (not (memq (vc-backend file) '(nil SVN)))
+	       (not (memq (vc-backend file) '(nil Hg)))
+	       (not (memq (vc-backend file) '(nil git))))
+      ad-do-it)))
