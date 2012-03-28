@@ -24,6 +24,7 @@
 ;;
 ;; Actually use viper, though
 ;;
+(setq viper-mode t)
 (require 'viper)
 (setq viper-expert-level 4)
 
@@ -37,5 +38,5 @@
     (when (and (featurep 'vc-hooks)
 	       (not (memq (vc-backend file) '(nil SVN)))
 	       (not (memq (vc-backend file) '(nil Hg)))
-	       (not (memq (vc-backend file) '(nil git))))
+	       (not (memq (vc-backend file) '(nil Git))))
       ad-do-it)))
