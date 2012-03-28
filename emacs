@@ -20,3 +20,9 @@
    haskell-mode))
 
 (el-get 'sync el-get-sources)
+
+;;
+;; Actually use viper, though
+;;
+(require 'viper)
+(setq viper-expert-level 4)
