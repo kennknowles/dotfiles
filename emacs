@@ -11,7 +11,6 @@
 (setq 
  el-get-sources 
  '(el-get
-   evil
    scala-mode
    python-mode
    ipython
