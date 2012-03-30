@@ -11,12 +11,12 @@
 (setq 
  el-get-sources 
  '(el-get
-   evil
    scala-mode
    python-mode
    ipython
    js2-mode
    ruby-mode
+   puppet-mode
    haskell-mode))
 
 (el-get 'sync el-get-sources)
