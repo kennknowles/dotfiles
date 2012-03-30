@@ -1,4 +1,5 @@
 alias ls='ls -G'
+PATH=/usr/local/bin:$PATH
 
 # Python
 export PYTHONSTARTUP=~/.pythonrc
