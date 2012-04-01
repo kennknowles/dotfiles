@@ -1,8 +1,10 @@
 alias ls='ls -G'
-PATH=/usr/local/bin:$PATH
+PATH=/usr/local/share/python:/usr/local/bin:$PATH
 
 # Python
-export PYTHONSTARTUP=~/.pythonrc
+if [ -f ~/.pythonrc ] ; then
+  PYTHONSTARTUP=~/.pythonrc
+fi
 
 # Ruby
 PATH=$PATH:$HOME/.rvm/bin 
