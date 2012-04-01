@@ -13,8 +13,6 @@
  '(el-get
    scala-mode
    python-mode
-   ipython
-   js2-mode
    ruby-mode
    puppet-mode
    haskell-mode))
@@ -22,7 +20,7 @@
 (el-get 'sync el-get-sources)
 
 ;;
-;; Actually use viper, though
+;; Viper
 ;;
 (setq viper-mode t)
 (require 'viper)
