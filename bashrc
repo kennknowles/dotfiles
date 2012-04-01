@@ -18,3 +18,10 @@ HISTIGNORE=ls:bg:fg:history
 HISTTIMEFORMAT='%F %T '
 shopt -s cmdhist
 PROMPT_COMMAND='history -a; history -n'
+
+#
+# Python virtualenvwrapper if avail
+#
+if which virtualenvwrapper.sh ; then
+  source `which virtualenvwrapper.sh`
+fi
