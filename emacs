@@ -15,6 +15,7 @@
    python-mode
    ruby-mode
    puppet-mode
+   go-mode
    haskell-mode))
 
 (el-get 'sync el-get-sources)
@@ -38,3 +39,17 @@
 	       (not (memq (vc-backend file) '(nil Hg)))
 	       (not (memq (vc-backend file) '(nil Git))))
       ad-do-it)))
+
+;;
+;; Save history across sessions; autosave every 10 seconds
+;;
+(savehist-mode 1)
+(setq savehist-autosave-interval 10)
+(setq savehist-save-minibuffer-history t)
+
+;;
+;; Some more hacking to make sure all wonky modes also indent well
+;;
+(setq c-basic-indent 4)
+(setq default-tab-width 4)
+(setq indent-tabs-mode nil)
