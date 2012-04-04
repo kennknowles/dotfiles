@@ -1,1 +1,5 @@
 Just my boring dotfiles. Let me know if I accidentally checked in a password :-)
+
+If you want to pretend to be me, try this:
+
+for file in `ls | grep -v README` ; do ln -is "$PWD/$file" ~/.`basename "$file"` ; done
