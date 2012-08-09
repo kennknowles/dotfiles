@@ -1,5 +1,5 @@
 alias ls='ls -G'
-PATH=/usr/local/share/python:/usr/local/bin:$PATH
+PATH=/usr/local/share/python:/usr/local/bin:/usr/local/sbin:$PATH
 
 # Python
 if [ -f ~/.pythonrc ] ; then
@@ -7,7 +7,7 @@ if [ -f ~/.pythonrc ] ; then
 fi
 
 # Ruby
-PATH=$PATH:$HOME/.rvm/bin 
+PATH=$PATH:$HOME/.rvm/bin
 
 # History
 shopt -s histappend
@@ -22,6 +22,8 @@ PROMPT_COMMAND='history -a; history -n'
 #
 # Python virtualenvwrapper if avail
 #
-if which virtualenvwrapper.sh ; then
+if which -s virtualenvwrapper.sh ; then
   source `which virtualenvwrapper.sh`
 fi
+
+. ~/.rvm/scripts/rvm
